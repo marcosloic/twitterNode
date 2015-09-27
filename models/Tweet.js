@@ -22,7 +22,7 @@ schema.statics.getTweets = function(page, skip, callback) {
 
     // Si tout marche…
     if(!err) {
-      tweets = docs;  // Houseton, we got tweets
+      tweets = docs;  // Houston, we got tweets
       tweets.forEach(function(tweet){
         tweet.active = true; // On les active
       });
