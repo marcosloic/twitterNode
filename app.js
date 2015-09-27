@@ -3,10 +3,10 @@
 var React = require('react');
 var TweetsApp = require('./components/TweetsApp.react');
 
-// Snag the initial state that was passed from the server side
+// On récupère l'état initial rendu du côté du serveur
 var initialState = JSON.parse(document.getElementById('initial-state').innerHTML)
 
-// Render the components, picking up where react left off on the server
+// On render les components à partir de l'état renvoyé par le serveur
 React.renderComponent(
   <TweetsApp tweets={initialState}/>,
   document.getElementById('react-app')
