@@ -39,7 +39,7 @@ var server = http.createServer(app).listen(port, function() {
 // Initalise socket.io
 var io = require('socket.io').listen(server);
 
-// Ici, on écoute les tweets qui correspondent au mot-clé "front-end"
-twit.stream('statuses/filter',{ track: 'front-end'}, function(stream){
+// Ici, on écoute les tweets qui correspondent au mot-clé "frontend"
+twit.stream('statuses/filter',{ track: 'frontend'}, function(stream){
   streamHandler(stream,io);
 });
