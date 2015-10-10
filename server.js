@@ -3,6 +3,7 @@ var express = require('express'),
   exphbs = require('express-handlebars'),
   http = require('http'),
   mongoose = require('mongoose'),
+  uriUtil = require('mongodb-uri'),
   twitter = require('twitter'),
   routes = require('./routes'),
   config = require('./config'),
@@ -19,8 +20,7 @@ app.set('view engine', 'handlebars');
 
 app.disable('etag');
 
-// Connexion à Mongolab
-mongoose.connect('mongodb://twitternode:twitternode@ds035563.mongolab.com:35563/twitternode');
+mongoose.connect('mongodb://test:test@ds035674.mongolab.com:35674/twitternode');
 
 var twit = new twitter(config.twitter);
 
